@@ -1,0 +1,26 @@
+package com.example.a09uf2;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.pm.ActivityInfo;
+import android.os.Bundle;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+
+public class VideoActivity extends AppCompatActivity {
+    WebView webView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_video);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
+        webView = findViewById(R.id.webView);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebChromeClient(new WebChromeClient());
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl(getIntent().getStringExtra("url"));
+    }
+}
