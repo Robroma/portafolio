@@ -1,0 +1,26 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="TorroRobertM10UF2H1_patient_list">
+      <field name="name">HospitalRTM list</field>
+      <field name="model">hospitalrtm.patient</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="surname"/>
+          <field name="name"/>
+          <field name="admission_date"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_patient_search" model="ir.ui.view">
+      <field name="name">hospitalrtm.patient.search</field>
+      <field name="model">hospitalrtm.patient</field>
+      <field name="arch" type="xml">
+        <search string="Search patient">
+          <field name="surname" string="surname"/>
+          <field name="dni" string="DNI"/>
+        </search>
+      </field>
+    </record>
+  </data>
+</odoo>

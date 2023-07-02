@@ -1,0 +1,6 @@
+<odoo>
+    <act_window id="action_menu" name="HospitalRTM" res_model="hospitalrtm.patient" view_mode="tree,form"/>
+    <menuitem id="main_menu" name="HospitalRTM"/>
+    <menuitem id="sub_menu1" name="Gestió de pacients" parent="main_menu"/>
+    <menuitem id="menu_action_patient" name="Llista de Pacients" parent="sub_menu1" action="action_menu"/>
+</odoo>

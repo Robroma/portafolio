@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="hospitalrtm.patient" id="patient_1">
+            <field name="name">Robert</field>
+            <field name="surname">Torro</field>
+            <field name="dni">12345678</field>
+            <field name="gender">male</field>
+            <field name="birth_date">2002-12-05</field>
+            <field name="nationality" ref="base.es" />
+            <field name="admission">True</field>
+            <field name="admission_date">2023-01-01</field>
+            <field name="info">Información adicional para Juan Pérez</field>
+            <field name="insurance">Seguro RTM</field>
+        </record>
+        <record model="hospitalrtm.patient" id="patient_2">
+            <field name="name">Josep</field>
+            <field name="surname">Martinez</field>
+            <field name="dni">91011121</field>
+            <field name="gender">male</field>
+            <field name="birth_date">2000-06-08</field>
+            <field name="nationality" ref="base.es" />
+            <field name="admission">False</field>
+            <field name="info">Información adicional para María López</field>
+        </record>
+        <record model="hospitalrtm.patient" id="patient_3">
+            <field name="name">Teresa</field>
+            <field name="surname">Gómez</field>
+            <field name="dni">31415161</field>
+            <field name="gender">female</field>
+            <field name="birth_date">1974-08-02</field>
+            <field name="nationality" ref="base.es" />
+            <field name="admission">True</field>
+            <field name="admission_date">2022-02-15</field>
+            <field name="info">Información adicional para Pedro Gómez</field>
+            <field name="insurance">Seguro ABC</field>
+        </record>
+    </data>
+</odoo>
+
