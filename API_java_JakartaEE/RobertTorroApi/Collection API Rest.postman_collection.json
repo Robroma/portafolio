@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "e12e2b9a-2a81-46e6-90c8-44c68c066bb1",
+		"name": "Collection API Rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27451347",
+		"_collection_link": "https://crimson-comet-132740.postman.co/workspace/RobertPracticaApi~e05b0e2e-5788-4c12-9298-19d1d646c5da/collection/27451347-e12e2b9a-2a81-46e6-90c8-44c68c066bb1?action=share&creator=27451347&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "barrio",
+			"item": [
+				{
+					"name": "resetBarrioByName",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ApiRobertTorro-1.0-SNAPSHOT/api/barrio/resetBarrioByName?name=Alameda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ApiRobertTorro-1.0-SNAPSHOT",
+								"api",
+								"barrio",
+								"resetBarrioByName"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Alameda"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBarrioByName",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ApiRobertTorro-1.0-SNAPSHOT/api/barrio/getBarrioByName?name=Alameda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ApiRobertTorro-1.0-SNAPSHOT",
+								"api",
+								"barrio",
+								"getBarrioByName"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Alameda"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "casa",
+			"item": [
+				{
+					"name": "getCasaPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ApiRobertTorro-1.0-SNAPSHOT/api/casa/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ApiRobertTorro-1.0-SNAPSHOT",
+								"api",
+								"casa",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCasas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ApiRobertTorro-1.0-SNAPSHOT/api/casa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ApiRobertTorro-1.0-SNAPSHOT",
+								"api",
+								"casa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putNuevaCasa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 123,\r\n    \"barrio\": \"Barriobajo\",\r\n    \"inquilinos\": [\r\n        {\r\n            \"id\": 456,\r\n            \"casa\": 123\r\n        },\r\n        {\r\n            \"id\": 789,\r\n            \"casa\": 123\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ApiRobertTorro-1.0-SNAPSHOT/api/casa/putNuevaCasa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ApiRobertTorro-1.0-SNAPSHOT",
+								"api",
+								"casa",
+								"putNuevaCasa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCasa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ApiRobertTorro-1.0-SNAPSHOT/api/casa/123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ApiRobertTorro-1.0-SNAPSHOT",
+								"api",
+								"casa",
+								"123"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "inquilino",
+			"item": [
+				{
+					"name": "getInquilinoPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ApiRobertTorro-1.0-SNAPSHOT/api/inquilino/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ApiRobertTorro-1.0-SNAPSHOT",
+								"api",
+								"inquilino",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getInquilinos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ApiRobertTorro-1.0-SNAPSHOT/api/inquilino/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ApiRobertTorro-1.0-SNAPSHOT",
+								"api",
+								"inquilino",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putNuevoInquilino",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 100,\r\n    \"casa\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ApiRobertTorro-1.0-SNAPSHOT/api/inquilino/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ApiRobertTorro-1.0-SNAPSHOT",
+								"api",
+								"inquilino",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteInquilino",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ApiRobertTorro-1.0-SNAPSHOT/api/inquilino/100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ApiRobertTorro-1.0-SNAPSHOT",
+								"api",
+								"inquilino",
+								"100"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
