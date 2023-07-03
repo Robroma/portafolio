@@ -1,0 +1,412 @@
+:root {
+  --sidebar: #c0d9d3;
+  --hoverSidebar: #ffee7c;
+  --preguntaSecundari: #ffee7c;
+  --fondoPantalla: #faf4e8;
+  --lletres: #4f6842;
+  --buttonPregunta: #ffee7c;
+
+  --loginBefore1: #13430d;
+  --loginBefore2: #42cb4b;
+  --loginAfter1: #ffee7c;
+  --loginAfter2: #f4f80b;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  /* text-align: center; */
+}
+
+/*
+  .home,
+  .reports,
+  .products {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+  }*/
+/*login*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container:hover .top:before,
+.container:hover .top:after,
+.container:active .top:before,
+.container:active .top:after,
+.container:hover .bottom:before,
+.container:hover .bottom:after,
+.container:active .bottom:before,
+.container:active .bottom:after {
+  margin-left: 200px;
+  transform-origin: -200px 50%;
+  transition-delay: 0s;
+}
+
+.container:hover .center,
+.container:active .center {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+.top:before,
+.top:after,
+.bottom:before,
+.bottom:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 200vmax;
+  height: 200vmax;
+  top: 50%;
+  left: 50%;
+  margin-top: -100vmax;
+  transform-origin: 0 50%;
+  transition: all 0.5s cubic-bezier(0.445, 0.05, 0, 1);
+  z-index: 10;
+  opacity: 0.65;
+  transition-delay: 0.2s;
+}
+
+.top:before {
+  transform: rotate(45deg);
+  background: var(--loginBefore1);
+}
+
+.top:after {
+  transform: rotate(135deg);
+  background: var(--loginAfter1);
+}
+
+.bottom:before {
+  transform: rotate(-45deg);
+  background: var(--loginBefore2);
+}
+
+.bottom:after {
+  transform: rotate(-135deg);
+  background: var(--loginAfter2);
+}
+
+.center {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.445, 0.05, 0, 1);
+  transition-delay: 0s;
+  color: #333;
+}
+
+.center input {
+  width: 100%;
+  padding: 15px;
+  margin: 5px;
+  border-radius: 1px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+/**/
+
+/*home*/
+.home {
+  min-height: 100vh;
+  background: var(--fondoPantalla);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home ul{
+  align-self: flex-start;
+}
+/**/
+/*dropdown clases*/
+
+.selectClase {
+  background: var(--sidebar);
+  color: var(--lletres);
+  margin-top: 2%;
+  width: 60%;
+  height: max-content;
+  font-size: large;
+}
+.selectClase:hover {
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+}
+.selectClase option:hover {
+  cursor: pointer;
+  font-size: large;
+}
+
+/**/
+
+/*preguntaDintre [id.tsx]*/
+.preguntaDintre {
+  min-height: 100vh;
+  background: var(--fondoPantalla);
+  display: flex;
+  flex-direction: column;
+}
+.preguntaDintre > * {
+  margin-left: 4%;
+  margin-right: 4%;
+}
+.preguntaDintre h1 {
+  margin-bottom: 0;
+}
+
+.preguntaDintre p:first-child {
+  margin-top: 0;
+}
+
+/*input preguntav*/
+.answer-input {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.answer-input__answer,
+.answer-input__code {
+  width: 100%;
+  height: 100px;
+  resize: none;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.answer-input__image {
+  margin-bottom: 10px;
+}
+
+.answer-input__submit {
+  display: block;
+  margin: 0 auto;
+}
+
+/**/
+
+/*Pregunta*/
+.pregunta {
+  width: 65%;
+  background: var(--sidebar);
+  color: var(--lletres);
+  margin: 20px;
+}
+.pregunta h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pregunta p {
+  cursor: pointer;
+  background: var(--preguntaSecundari);
+  padding: 3%;
+}
+.pregunta p:hover {
+  transition: 100ms;
+  scale: 103%;
+}
+
+.liAula{
+  width: 100%;
+  
+}
+
+.btnAula  {
+  cursor: pointer;
+  background: var(--preguntaSecundari);
+  margin: 2%;
+}
+.btnAula :hover {
+  transition: 100ms;
+  scale: 113%;
+}
+
+.pregunta h4 span:first-child,
+h4 button:first-child {
+  align-items: center;
+  font-size: 20px;
+  margin-left: 3%;
+  text-align: left;
+}
+.pregunta h4 span:last-child,
+h4 button:last-child {
+  font-size: 20px;
+  margin-right: 3%;
+  text-align: right;
+}
+
+.pregunta button {
+  background: var(--buttonPregunta);
+  border: none;
+}
+
+.afegirPregunta {
+  font-size: 25px;
+  background: var(--buttonPregunta);
+  border: none;
+  width: 7%;
+  height: 8%;
+}
+.afegirPregunta:hover {
+  cursor: pointer;
+  transition: 100ms;
+  scale: 103%;
+}
+
+.pregunta button:hover {
+  scale: 110%;
+  cursor: pointer;
+}
+
+.iconPregunta {
+  width: 25px;
+  height: 25px;
+}
+/**/
+
+/*<Sidebar>*/
+.btnSidebar {
+  background: var(--sidebar);
+  border: black;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: start;
+}
+
+.btnSidebar svg {
+  width: 25px;
+  height: 25px;
+  color: var(--lletres);
+}
+
+.btnSidebar:hover {
+  background: var(--hoverSidebar);
+  border: 1px solid var(--lletres);
+  cursor: pointer;
+}
+
+.sidebarText {
+  font-size: 25px;
+  color: var(--lletres);
+}
+
+.navbar {
+  background-color: var(--sidebar);
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.navbar svg {
+  color: var(--lletres);
+}
+.navbar svg:hover {
+  cursor: pointer;
+}
+
+.menu-bars {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
+}
+
+.nav-menu {
+  background-color: var(--sidebar);
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+}
+
+.nav-text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 0 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+
+.nav-menu-items {
+  width: 100%;
+  padding: 0;
+}
+
+.navbar-toggle {
+  color: var(--lletres);
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  cursor: pointer;
+}
+
+span {
+  margin-left: 16px;
+}
+
+/*</Sidebar>*/
+
+/*Create Dubte*/
+.text-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.textarea {
+  width: 100%;
+}
+
+/*<Aula>*/
+.aula {
+  background-color: #c0d9d3;
+}
+/*</Aula>*/
+
+.btnLike {
+  color: #1b6bb8;
+}
+.btnNotLike {
+  color: #000000;
+}
